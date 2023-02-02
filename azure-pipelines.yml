@@ -21,12 +21,11 @@ stages:
       vmImage: ubuntu-latest
     steps:
     -  task: Docker@2
-        inputs:
-          containerRegistry: 'Terraform Test Service connection'
-          repository: 'bikramsingharoy/weatherforecastapi'
-          command: 'buildAndPush'
-          Dockerfile: '**/Dockerfile'
-          tags: |
-            $(tag)
-  - 
-
+       inputs:
+         containerRegistry: 'Bikram Docker Hub'
+         repository: 'bikramsingharoy/weatherforecastapi'
+         command: 'buildAndPush'
+         Dockerfile: '**/Dockerfile'
+        tags: |
+          $(tag)
+ 
