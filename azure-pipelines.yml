@@ -26,6 +26,6 @@ stages:
          repository: 'bikramsingharoy/weatherforecastapi'
          command: 'buildAndPush'
          Dockerfile: '**/Dockerfile'
-        tags: |
-          $(tag)
+         tags: |
+           $(tag)
  
